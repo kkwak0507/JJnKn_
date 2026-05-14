@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+  --color-surface-bright: #fcf9f8;
+  --color-secondary-fixed: #e2e2e4;
+  --color-primary-fixed: #dde1ff;
+  --color-background: #fcf9f8;
+  --color-on-surface-variant: #434657;
+  --color-on-surface: #1c1b1b;
+  --color-error: #ba1a1a;
+  --color-on-tertiary-fixed-variant: #46464b;
+  --color-secondary-fixed-dim: #c6c6c8;
+  --color-surface-dim: #dcd9d9;
+  --color-on-primary-fixed-variant: #0033c0;
+  --color-surface-container-low: #f6f3f2;
+  --color-on-primary-container: #d4d9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline-variant: #c4c5da;
+  --color-surface-container-highest: #e5e2e1;
+  --color-on-primary-fixed: #001257;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-fixed-dim: #c7c6cb;
+  --color-surface-variant: #e5e2e1;
+  --color-on-tertiary-container: #dcdbe1;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-high: #ebe7e7;
+  --color-tertiary: #48484d;
+  --color-secondary-container: #dfdfe1;
+  --color-on-primary: #ffffff;
+  --color-inverse-on-surface: #f3f0ef;
+  --color-error-container: #ffdad6;
+  --color-surface-tint: #0046fa;
+  --color-primary-container: #0047ff;
+  --color-tertiary-container: #606065;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed-dim: #b9c3ff;
+  --color-on-background: #1c1b1b;
+  --color-surface: #fcf9f8;
+  --color-primary: #0035c5;
+  --color-on-secondary-fixed: #1a1c1d;
+  --color-surface-container: #f0edec;
+  --color-on-error: #ffffff;
+  --color-outline: #747688;
+  --color-tertiary-fixed: #e3e2e7;
+  --color-inverse-primary: #b9c3ff;
+  --color-inverse-surface: #313030;
+  --color-on-secondary-container: #616365;
+  --color-on-secondary-fixed-variant: #454749;
+  --color-secondary: #5d5e60;
+  --color-on-tertiary-fixed: #1a1b1f;
+
+  --spacing-section-gap: 120px;
+  --spacing-container-max: 1280px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+}
+
+@layer utilities {
+  .project-image {
+    filter: grayscale(100%);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .project-card:hover .project-image {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+  }
+}
